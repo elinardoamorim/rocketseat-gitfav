@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  
+  --ff-primary: 'Roboto', sans-serif;
+  --fc-primary: #E1E1E6;
+  --fc-input: #7C7C8A;
+  --border-primary: #4A808C;
+}
+
+body {
+  font-family: var(--ff-primary);
+  font-size: 1.6rem;
+  background: #7C7C8A;
+}
+
+.sr-only {
+  position: absolute;
+  width: .1rem;
+  height: .1rem;
+  padding: 0;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0; 
+}
+
+#app {
+  max-width: 112rem;
+  /* border: 2px solid red; */
+
+  margin: 11.5rem auto 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 8rem;
+}
+
+header .search {
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+}
+
+.search input {
+  width: 40rem;
+  height: 4.8rem;
+  background: #06181C;
+  border: none;
+  border-radius: 5px;
+
+  color: var(--fc-input);
+
+  padding: 1.6rem;
+}
+
+.search input:focus {
+  outline: solid var(--border-primary);
+}
+
+.search button {
+  background: #065E7C;
+  border: none;
+  border-radius: 5px;
+
+  display: flex;
+  gap: .8rem;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  padding: 1.2rem 3.2rem;
+
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #FFFFFF;
+  color: #065E7C;
+}
+
+.search button:hover svg path {
+  fill: #065E7C;
+}
+
+table {
+  width: 100%;
+  border-radius: 12px;
+  border-spacing: 0;
+}
+
+table thead {
+  background: #092D38;
+}
+
+table tbody tr:nth-child(odd) {
+  background: rgba(6, 22, 27, 0.5);
+}
+
+table tbody tr:nth-child(even) {
+  background: #06181C;
+}
+
+table th, table td{
+  border-top: 1px solid var(--border-primary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+table th:first-child, table td:first-child {
+  border-left: 1px solid var(--border-primary);
+}
+
+table th:last-child, table td:last-child {
+  border-right: 1px solid var(--border-primary);
+}
+
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 6px;
+}
+
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 6px;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 6px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 6px;
+}
+
+table .user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
